@@ -7,9 +7,12 @@
 
 .navPageHome {
   width: 100%;
+  min-height: 50vh;
+  padding-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
   background-color: var(--color-main-first);
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(16, 14, 44, 0.836)),
@@ -17,7 +20,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
   color: var(--color-white);
 }
 
@@ -28,19 +30,21 @@
   align-items: center;
   gap: 0.625rem;
   text-align: center;
-  width: 90%;
+  padding: 10px;
 
   h1 {
-    font-size: 1.625rem;
+    // font-size: clamp(26px, 1.2vw + 1rem, 140px);
     padding-bottom: 0.875rem;
     color: var(--color-yellow);
     font-weight: 800;
+    line-height: normal;
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: clamp(14px, 0.5vw + 1rem, 5.625rem);
     color: var(--color-white);
     font-weight: bold;
+    line-height: normal;
   }
 }
 
@@ -51,7 +55,7 @@
   border: none;
   padding: 0.625rem 1.25rem;
   border-radius: 0.5rem;
-  font-size: 1.125rem;
+  font-size: clamp(14px, 0.3vw + 1rem, 5.625rem);
   font-weight: bold;
   margin-top: 2.5rem;
 
@@ -83,7 +87,7 @@
   background-color: var(--color-yellow);
   border: none;
   padding: 0.5rem 1.25rem;
-  font-size: 1rem;
+  // font-size: 1rem;
   color: var(--color-black);
   font-weight: bold;
   border-radius: 0.5rem;
@@ -93,7 +97,6 @@
 .textName {
   color: var(--color-blue2);
   font-weight: 500;
-  padding-top: 0.625rem;
 }
 
 .sessionContainer {
@@ -107,6 +110,7 @@
 // ---MAIN---
 .mainPageHome {
   background-color: var(--color-blue2);
+  width: 100%;
 }
 .textDesk {
   display: none;
@@ -118,6 +122,8 @@
   align-items: center;
   padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   color: var(--color-orange);
+  max-width: 1600px;
+  margin: 0 auto;
 
   a {
     color: var(--color-yellow);
@@ -127,9 +133,12 @@
 // ---SLIDER---
 .containerSlider {
   padding-left: 0px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .listCheck {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +161,6 @@
     align-items: center;
     gap: 1.25rem;
     padding-bottom: 0.625rem;
-    width: 94%;
     color: var(--color-white2);
   }
 }
@@ -177,6 +185,10 @@
   height: 25rem;
   border-radius: 0.625rem;
   object-fit: cover;
+}
+
+.userReview {
+  font-size: clamp(14px, 0.1vw + 1rem, 5.625rem);
 }
 
 .textReview {
@@ -205,6 +217,7 @@
 
 @media screen and (min-width: 48rem) {
   // ----NAV---
+
   .navPageHome {
     background: linear-gradient(
         rgba(16, 14, 44, 0.836),
@@ -215,13 +228,14 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    padding-bottom: 5rem;
   }
 
   .navText {
-    width: 60%;
+    max-width: 70%;
+    gap: 1.25rem;
     h1 {
-      font-size: 2.125rem;
+      max-width: 60%;
     }
   }
 
@@ -246,12 +260,13 @@
 
     h2,
     p {
-      width: 43.75rem;
+      width: 60%;
+      margin: 0 auto;
     }
 
     h2 {
       text-align: center;
-      font-size: 2.5rem;
+      // font-size: 2.5rem;
       color: var(--color-orange);
     }
   }
@@ -270,6 +285,14 @@
     padding-left: 1.875rem;
   }
 
+  .containerListCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .listCheck {
     padding-top: 6.25rem;
 
@@ -278,16 +301,20 @@
     }
 
     li {
+      width: 60%;
       justify-content: flex-start;
-      max-width: 50rem;
+      font-size: clamp(14px, 0.3vw + 1rem, 5.625rem);
     }
   }
 
   // 3 pic section
   .containerPics {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     gap: 1.25rem;
-    padding: 7.5rem 7.5rem 2.5rem 7.5rem;
+    padding: 7.5rem 2.5rem 2.5rem 2.5rem;
 
     .side {
       display: flex;
@@ -298,26 +325,30 @@
 
     .side img {
       height: 12.5rem;
-      width: 18.75rem;
+      width: 400px;
+      max-width: 100%;
       border-radius: 0.625rem;
       object-fit: cover;
     }
 
     .fullwidth img {
       height: 25.625rem;
-      width: 18.75rem;
+      max-width: 100%;
+      min-width: 15rem;
       border-radius: 0.625rem;
       object-fit: cover;
     }
 
     .textReview {
       padding-right: 2.5rem;
-      width: 31.25rem;
+      width: 100%;
+      max-width: 500px;
     }
 
     .numbers {
       display: flex;
-      gap: 1.25rem;
+      width: 100%;
+      gap: 50px;
       padding-top: 1.25rem;
 
       h4 {
@@ -325,9 +356,23 @@
       }
       p {
         color: var(--color-white2);
-        font-size: 0.875rem;
+
         font-weight: bold;
       }
+      .dataNumbers {
+        max-width: 120px;
+
+        p {
+          font-size: clamp(14px, 0.1vw + 1rem, 5.625rem);
+        }
+      }
+    }
+
+    .sideImages {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      gap: 20px;
     }
   }
 
@@ -336,16 +381,28 @@
   .containerReview {
     flex-direction: row;
     gap: 1.875rem;
+    padding: 4.25rem 2.5rem 0 2.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .imgReview {
+    max-width: 800px;
   }
 
   .imgReview img {
-    width: 25rem;
-    height: 25rem;
+    min-height: 500px;
+    max-width: 550px;
     border-radius: 50%;
   }
 
   .textReview {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
 
     .textOne,
     h2 {

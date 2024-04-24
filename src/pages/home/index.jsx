@@ -59,13 +59,13 @@ export default function Home() {
                   Welcome {session.user.username}!
                 </p>
                 <button className={styles.btnMenu} onClick={() => signOut()}>
-                  Sign Out
+                  <p className={styles.textName}>Sign Out</p>
                 </button>
               </div>
             ) : (
               <div className={styles.containerBtn}>
                 <button className={styles.btnMenu} onClick={() => signIn()}>
-                  Sign In
+                  <p className={styles.textName}>Sign In</p>
                 </button>
               </div>
             )}
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
         <div className={styles.listCheck}>
           <h2>Discover Sicily: Experiences to Explore</h2>
-          <ul>
+          <ul className={styles.containerListCheck}>
             <li>
               <span className={styles.check}>
                 <IconCheck />
@@ -172,43 +172,47 @@ export default function Home() {
               consectetur, adipisicing elit. Fuga iusto eveniet distinctio
               molestiae quas repellat labore illum? Harum expedita ea incidunt
               omnis! Similique ducimus quod quam repellat quis ab quaerat. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo
-              quo similique esse voluptates porro iure reiciendis alias laborum,
-              omnis consequuntur neque itaque ab cumque ullam ad, dolorum
-              aspernatur velit!
+              ipsum dolor sit amet consectetur adipisicing elit. aspernatur
+              velit!
             </p>
             <div className={styles.numbers}>
-              <span>
+              <div className={styles.dataNumbers}>
                 <h4>500+</h4>
                 <p>Satisfied Costumers</p>
-              </span>
-              <span>
+              </div>
+              <div className={styles.dataNumbers}>
                 <h4>120+</h4>
                 <p>Destinations</p>
-              </span>
-              <span>
+              </div>
+              <div className={styles.dataNumbers}>
                 <h4>400+</h4>
                 <p>Bookings last week</p>
-              </span>
+              </div>
             </div>
           </div>
-
-          <div className={styles.fullwidth}>
-            <Image src="/mare.jpg" width={800} height={800} alt="Immagine 3" />
-          </div>
-          <div className={styles.side}>
-            <Image
-              src="/orange.jpg"
-              width={800}
-              height={800}
-              alt="Immagine 1"
-            />
-            <Image
-              src="/girlAir.jpg"
-              width={800}
-              height={800}
-              alt="Immagine 2"
-            />
+          <div className={styles.sideImages}>
+            <div className={styles.fullwidth}>
+              <Image
+                src="/mare.jpg"
+                width={800}
+                height={800}
+                alt="sea picture"
+              />
+            </div>
+            <div className={styles.side}>
+              <Image
+                src="/orange.jpg"
+                width={800}
+                height={800}
+                alt="sicilian oranges"
+              />
+              <Image
+                src="/girlAir.jpg"
+                width={800}
+                height={800}
+                alt="jumping girl"
+              />
+            </div>
           </div>
         </div>
 
@@ -216,8 +220,8 @@ export default function Home() {
           <div className={styles.imgReview}>
             <Image
               src="/reviewPic.jpg"
-              width={800}
-              height={800}
+              width={2400}
+              height={2400}
               alt="review picture"
               priority
             />

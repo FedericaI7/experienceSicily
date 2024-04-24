@@ -62,7 +62,7 @@
   align-items: flex-end;
 
   p {
-    font-size: 1.875rem;
+    font-size: clamp(26px, 1vw + 1rem, 40px);
     font-weight: bold;
     color: var(--color-orange);
   }
@@ -138,7 +138,7 @@
   margin-bottom: 3.75rem;
   cursor: pointer;
   padding: 0.625rem 1.25rem;
-  font-size: 1rem;
+  font-size: clamp(16px, 0.1vw + 1rem, 40px);
   font-weight: bold;
   background-color: var(--color-blueBtn);
   color: var(--color-white);
@@ -177,7 +177,8 @@
   }
 
   .titleInfo {
-    font-size: 1.875rem;
+    // font-size: 1.875rem;
+    font-size: clamp(30px, 0.2vw + 1rem, 40px);
   }
 
   .info {
@@ -186,6 +187,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .infoPriceStars {
@@ -198,7 +202,7 @@
     padding-top: 3.125rem;
 
     .price {
-      font-size: 1.625rem;
+      font-size: clamp(26px, 1vw + 1rem, 30px);
     }
   }
 
@@ -213,13 +217,17 @@
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1.25rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 0.625rem;
   }
 
   .infoDescription {
-    width: 40vw;
+    width: 100%;
+    max-width: 500px;
     padding: 0;
 
     h2 {
@@ -231,12 +239,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 
     .mainPic img {
+      // width: 55vw;
       width: 55vw;
-      height: 70vh;
+      max-width: 1300px;
+      height: auto;
+      max-height: 600px;
       object-fit: cover;
       border-radius: 1.25rem;
     }
@@ -259,13 +270,16 @@
   .containerPicBottom {
     display: flex;
     width: 55vw;
+    max-width: 1300px;
     gap: 1.25rem;
     padding-top: 0.5rem;
 
     .picBottom img {
       cursor: pointer;
-      width: 17vw;
-      height: 24vh;
+      // width: 17vw;
+      width: 100%;
+      height: auto;
+      max-height: 300px;
       border-radius: 1.25rem;
       object-fit: cover;
     }
@@ -287,6 +301,9 @@
   .suggestion {
     padding-top: 5rem;
     padding-bottom: 8.75rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
 
     h2 {
       padding-bottom: 3.125rem;

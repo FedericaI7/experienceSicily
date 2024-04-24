@@ -30,9 +30,22 @@ ul {
   --color-blue2: #0a011f;
   --color-yellow: #ffcf56;
   --color-orange: #cf4012;
+  /* --color-orange: #cf8312; */
   --color-blueBtn: rgb(29, 29, 61);
 }
 
 img {
   -webkit-user-drag: none;
+}
+
+h1 {
+  font-size: clamp(26px, 1.2vw + 1rem, 140px);
+}
+
+h2 {
+  font-size: clamp(24px, 1vw + 1rem, 100px);
+}
+
+p {
+  font-size: clamp(16px, 0.1vw + 1rem, 40px);
 }

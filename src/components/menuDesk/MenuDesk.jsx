@@ -26,17 +26,17 @@ const MenuDesk = () => {
         <div>
           {session ? (
             <div className={styles.sessionContainer}>
-              <p className={styles.textName}>
+              <p className={styles.textNameUser}>
                 Welcome {session.user.username}!
               </p>
               <button className={styles.btnMenu} onClick={() => signOut()}>
-                Sign Out
+                <p className={styles.textName}>Sign Out</p>
               </button>
             </div>
           ) : (
             <div className={styles.containerBtn}>
               <button className={styles.btnMenu} onClick={() => signIn()}>
-                Sign In
+                <p className={styles.textName}>Sign In</p>
               </button>
             </div>
           )}

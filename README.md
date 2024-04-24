@@ -38,6 +38,7 @@ Users can search for specific experiences by category and name.
 
 ## Technologies Used
 - Next.js
+- Sass
 - MongoDB with Mongoose
 - Tabler
 - Mantine

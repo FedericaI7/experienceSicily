@@ -1,4 +1,5 @@
-![present1](https://github.com/FedericaI7/experienceSicily/assets/125682865/b955fee9-a85b-4f6f-8acd-afb8d9e5f4f0)
+![presentazione](https://github.com/FedericaI7/experienceSicily/assets/125682865/f5a046c1-4bd2-4507-8216-a26821d8183a)
+
 ![logoPres-02](https://github.com/FedericaI7/experienceSicily/assets/125682865/0327ca9e-61f7-44f9-aad3-b0936ce93b38)
 # Sicily Experience 
 ## Presentation

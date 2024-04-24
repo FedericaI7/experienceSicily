@@ -33,7 +33,6 @@
   padding: 10px;
 
   h1 {
-    // font-size: clamp(26px, 1.2vw + 1rem, 140px);
     padding-bottom: 0.875rem;
     color: var(--color-yellow);
     font-weight: 800;
@@ -87,7 +86,6 @@
   background-color: var(--color-yellow);
   border: none;
   padding: 0.5rem 1.25rem;
-  // font-size: 1rem;
   color: var(--color-black);
   font-weight: bold;
   border-radius: 0.5rem;
@@ -266,7 +264,6 @@
 
     h2 {
       text-align: center;
-      // font-size: 2.5rem;
       color: var(--color-orange);
     }
   }
